@@ -22,10 +22,12 @@ class keypad_module:
   KEYCOL = [0b11110111,0b11111011,0b11111101,0b11111110]
 
   # Keypad Keycode matrix
-  KEYCODE  = [['1','4','7','*'], # KEYCOL0
-              ['2','5','8','0'], # KEYCOL1
-              ['3','6','9','#'], # KEYCOL2
-              ['A','B','C','D']] # KEYCOL3
+  KEYCODE  = [['A1','A2','A3','A4','A5','A6'], # COL0
+              ['B1','B2','B3','B4','B5','B6'], # COL1
+              ['C1','C2','C3','C4','C5','C6'], # COL2
+              ['D1','D2','D3','D4','D5','D6'], # COL3
+              ['E1','E2','E3','E4','E5','E6'], # COL4
+              ['F1','F2','F3','F4','F5','F6']] # COL5
 
   # Decide the row
   DECODE = [0,0,0,0, 0,0,0,0, 0,0,0,1, 0,2,3,0]
