@@ -173,7 +173,7 @@ class Keypad():
         return time.time() * 1000
 
 if __name__ == "__main__":
-    from pad4pi import rpi_gpio
+    from push4pi import rpi_gpio
 
     KEYPAD = [
         ["a1","a2","a3","a4","a5","a6"],
