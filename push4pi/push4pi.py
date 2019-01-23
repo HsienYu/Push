@@ -173,8 +173,6 @@ class Keypad():
         return time.time() * 1000
 
 if __name__ == "__main__":
-    from push4pi import push4pi
-
     KEYPAD = [
         ["a1","a2","a3","a4","a5","a6"],
         ["b1","b2","b3","b4","b5","b6"],
@@ -185,7 +183,7 @@ if __name__ == "__main__":
         ]
     ROW_PINS = [17,27,22,5,6,13] # BCM numbering
     COL_PINS = [19,26,18,23,12,16] # BCM numbering
-    kp = push4pi.KeypadFactory().create_keypad(keypad=KEYPAD, row_pins=ROW_PINS, col_pins=COL_PINS, repeat=True, repeat_rate=5, key_delay=100)
+    kp = KeypadFactory().create_keypad(keypad=KEYPAD, row_pins=ROW_PINS, col_pins=COL_PINS, repeat=True, repeat_rate=5, key_delay=100)
     def printkey(key):
         print(key)
     kp.registerKeyPressHandler(printkey)
