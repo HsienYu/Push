@@ -183,8 +183,8 @@ if __name__ == "__main__":
         ["e1","e2","e3","e4","e5","e6"],
         ["f1","f2","f3","f4","f5","f6"]
         ]
-    row_pins = [17,27,22,5,6,13] # BCM numbering
-    col_pins = [19,26,18,23,12,16] # BCM numbering
+    ROW_PINS = [17,27,22,5,6,13] # BCM numbering
+    COL_PINS = [19,26,18,23,12,16] # BCM numbering
     kp = rpi_gpio.KeypadFactory().create_keypad(keypad=KEYPAD, row_pins=ROW_PINS, col_pins=COL_PINS, repeat=True, repeat_rate=5, key_delay=100)
     def printkey(key):
         print(key)
