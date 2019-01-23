@@ -31,33 +31,6 @@ class KeypadFactory():
 
         return Keypad(keypad, row_pins, col_pins, key_delay, repeat, repeat_delay, repeat_rate, gpio_mode)
 
-    def create_4_by_3_keypad(self):
-
-        KEYPAD = [
-            [1,2,3],
-            [4,5,6],
-            [7,8,9],
-            ["*",0,"#"]
-        ]
-
-        ROW_PINS = [4,14,15,17]
-        COL_PINS = [18,27,22]
-
-        return self.create_keypad(KEYPAD, ROW_PINS, COL_PINS)
-
-    def create_4_by_4_keypad(self):
-
-        KEYPAD = [
-            [1,2,3,"A"],
-            [4,5,6,"B"],
-            [7,8,9,"C"],
-            ["*",0,"#","D"]
-        ]
-
-        ROW_PINS = [4,14,15,17]
-        COL_PINS = [18,27,22,23]
-
-        return self.create_keypad(KEYPAD, ROW_PINS, COL_PINS)
 
 class Keypad():
     def __init__(self, keypad, row_pins, col_pins, key_delay=DEFAULT_KEY_DELAY, repeat=False, repeat_delay=None, repeat_rate=None,gpio_mode=GPIO.BCM):
