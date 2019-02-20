@@ -28,7 +28,7 @@ def get_key():
             if GPIO.input(row_pin):
                key = keys[row_num][col_num]
         GPIO.output(col_pin, 0)
-     return key
+    return key
 
 while True:
     key = get_key()
