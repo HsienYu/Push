@@ -23,11 +23,11 @@ class KeypadFactory():
                  ["f1","f2","f3","f4","f5","f6"]
             ]
 
-        if row_pins is None:
+         if row_pins is None:
             row_pins = [17,27,22,5,6,13] # BCM numbering
 
         if col_pins is None:
-            col_pins = [19,26,18,23,12,16] # BCM numbering
+            col_pins = [19,26,14,15,23,24] # BCM numbering
 
         return Keypad(keypad, row_pins, col_pins, key_delay, repeat, repeat_delay, repeat_rate, gpio_mode)
 
@@ -155,7 +155,7 @@ if __name__ == "__main__":
         ["f1","f2","f3","f4","f5","f6"]
         ]
     ROW_PINS = [17,27,22,5,6,13] # BCM numbering
-    COL_PINS = [19,26,18,23,12,16] # BCM numbering
+    COL_PINS = [19,26,14,15,23,24] # BCM numbering
     kp = KeypadFactory().create_keypad(keypad=KEYPAD, row_pins=ROW_PINS, col_pins=COL_PINS, repeat=True, repeat_rate=5, key_delay=100)
     def printkey(key):
         print(key)
