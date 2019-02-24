@@ -35,19 +35,20 @@ try:
     while True:
         key = get_key()
         if key :
-            #print key
+            #print(key)
             position = key.split('-')
             x = position[0]
             y = position[1]
-            print position
-            btn_params = { 'x' = x , 'y' = y}
-            r = requests.get('http://localhost:3000/api/button/', params = btn_params)
-            print r.url
-            print r.status_code
+            print(position)
+            btn_params = {'x' = x , 'y' = y}
+            host_url = 'http://localhost:3000/api/button/'
+            r = requests.get(host_url, params = btn_params)
+            print(r.url)
+            print(r.status_code)
             time.sleep(0.2)
 
 except KeyboardInterrupt:
-    print "done"
+    print("done")
 
 finally:
     GPIO.cleanup()

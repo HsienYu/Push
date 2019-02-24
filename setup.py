@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name="push4pi",
+setup(name="btn",
     version="1.0.0",
     description="",
     url="",
@@ -11,5 +11,6 @@ setup(name="push4pi",
     packages=["push4pi"],
     install_requires=[
         "RPi.GPIO"
+        "requests"
     ],
 )
