@@ -7,7 +7,7 @@ GPIO.setmode(GPIO.BCM)
 rows = [17, 27, 22, 5, 6, 13]
 cols = [19, 26, 14, 15, 23, 24]
 keys = [
-    ["1-6", "1-5", "1-4", "1-3", "1-2", "1-1"],
+    ["1-1", "1-2", "1-3", "1-4", "1-5", "1-6"],
     ["2-6", "2-5", "2-4", "2-3", "2-2", "2-1"],
     ["3-1", "3-2", "3-3", "3-4", "3-5", "3-6"],
     ["4-6", "4-5", "4-4", "4-3", "4-2", "4-1"],
@@ -43,14 +43,14 @@ try:
             y = position[1]
             print(position)
             #btn_params = {'x': x, 'y': y}
-            host_url = 'http://localhost:3000/api/button'+'/'+x+'/'+y
+            host_url = 'http://localhost:3000/api/button/' + x + '/' + y
             r = requests.get(host_url)
             print(r.url)
             print(r.status_code)
             time.sleep(0.2)
 
 except KeyboardInterrupt:
-    print("done")
+    print('\n' + "done")
 
 finally:
     GPIO.cleanup()
