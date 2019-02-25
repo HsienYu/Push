@@ -43,7 +43,7 @@ try:
             y = position[1]
             print(position)
             #btn_params = {'x': x, 'y': y}
-            host_url = 'http://localhost:3000/api/button/{x}/{y}'
+            host_url = 'http://localhost:3000/api/button'+'/'+x+'/'+y
             r = requests.get(host_url)
             print(r.url)
             print(r.status_code)
